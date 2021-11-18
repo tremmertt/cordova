@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css">
+    <!-- moment lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <title>RENTALZ</title>
+</head>
+
+<body>
+    <!-- PAGE "HOME" -->
+    <div data-role="page" id="page-home" class="page">
+        <div data-role="header" data-position="fixed" >
+            <div style="margin-left: 5px;">
+                <a style="border: none; background-color: transparent;" href="#page-home" data-transition="none"
+                   class="ui-btn ui-icon-home ui-btn-icon-notext ui-nodisc-icon">Home</a>
+            </div>
+        </div>
+
+        <div data-role="main" class="ui-content" style="padding-right: 0; padding-left: 0;">
+            <h1 style="color: black">Welcome to RentalZ</h1>
+
+            <div>
+                <h2 style="color: black"> Kinds of Room </h2>
+                <section class="grid-container form">
+                    <img class="gird-item1" style="width:180px;height:180px; margin-top:25px" src="img/Studio.jpg" >
+                    <span class="gird-item2" style="margin: 5px">
+                        <h3 style="font-size:160%; color: black"> Studio </h3>
+                        <p style="font-size:120%; color: black"> Suitable for events, photography or team building </p>
+                        <p style="font-size:100%;color: black"> Price: 250,000Đ/ day  </p>
+                        <button style="width:120px; height:40px; background: #e7e7e7; border-radius:5px; text-align: center "> Detail </button>
+                    </span>
+                </section>
+                <br />
+                <section class="grid-container form">
+                    <img class="gird-item1" style="width:180px;height:180px; margin-top:25px" src="img/Studio1.jpg" >
+                    <span class="gird-item2" style="margin: 5px; color: black">
+                        <h3 style="font-size:160%;color: black"> Studio Light </h3>
+                        <p style="font-size:120%;color: black"> Suitable for events, photography or team building </p>
+                        <p style="font-size:100%;color: black"> Price: 350,000Đ/ day  </p>
+                        <button style="width:120px; height:40px; background: #e7e7e7; border-radius:5px; text-align: center "> Detail </button>
+                    </span>
+                </section>
+                <br />
+                <section class="grid-container form">
+                    <img class="gird-item1" style="width:180px;height:180px; margin-top:20px" src="img/4-posterbed.jpg" >
+                    <span class="gird-item2" style="margin: 5px; color: black">
+                        <h3 style="font-size:160%;color: black"> Four-Poster Bed </h3>
+                        <p style="font-size:120%;color: black"> Suitable for honeymoon couples </p>
+                        <p style="font-size:100%;color: black"> Price: 500,000Đ/ day  </p>
+                        <button style="width:120px; height:40px; background: #e7e7e7; border-radius:5px; text-align: center "> Detail </button>
+                    </span>
+                </section>
+                <br />
+                <section class="grid-container form">
+                    <img class="gird-item1" style="width:180px;height:180px; margin-top:25px" src="img/4-posterbed1.jpg" >
+                    <span class="gird-item2" style="margin: 5px;">
+                        <h3 style="font-size:160%;color: black"> Four-Poster Bed Vintage </h3>
+                        <p style="font-size:120%;color: black"> Suitable for honeymoon couples </p>
+                        <p style="font-size:100%;color: black"> Price: 450,000Đ/ day  </p>
+                        <button style="width:120px; height:40px; background: #e7e7e7; border-radius:5px; text-align: center "> Detail </button>
+                    </span>
+                </section>
+                <br />
+                <section class="grid-container form">
+                    <img class="gird-item1" style="width:180px;height:180px; margin-top:20px" src="img/2Bed.jpg" >
+                    <span class="gird-item2" style="margin: 5px;">
+                        <h3 style="font-size:160%;color: black"> Two Bed </h3>
+                        <p style="font-size:120%;color: black"> Suitable for family traveling </p>
+                        <p style="font-size:100%;color: black"> Price: 200,000Đ/ day  </p>
+                        <button style="width:120px; height:40px; background: #e7e7e7; border-radius:5px; text-align: center "> Detail </button>
+                    </span>
+                </section>
+                <br />
+                <section class="grid-container form">
+                    <img class="gird-item1" style="width:180px;height:180px; margin-top:25px" src="img/2Bed1.jpg" >
+                    <span class="gird-item2" style="margin: 5px;">
+                        <h3 style="font-size:160%;color: black"> Two Bed Simple </h3>
+                        <p style="font-size:120%;color: black"> Suitable for family traveling </p>
+                        <p style="font-size:100%;color: black"> Price: 225,000Đ/ day  </p>
+                        <button style="width:120px; height:40px; background: #e7e7e7; border-radius:5px; text-align: center "> Detail </button>
+                    </span>
+                </section>
+                <br />
+                <section class="grid-container form">
+                    <img class="gird-item1" style="width:180px;height:180px; margin-top:20px" src="img/bunks.jpg" >
+                    <span class="gird-item2" style="margin: 5px;">
+                        <h3 style="font-size:160%;color: black"> Bunk Bed Simple </h3>
+                        <p style="font-size:120%;color: black"> Suitable for family with children </p>
+                        <p style="font-size:100%;color: black"> Price: 550,000Đ/ day  </p>
+                        <button style="width:120px; height:40px; background: #e7e7e7; border-radius:5px; text-align: center "> Detail </button>
+                    </span>
+                </section>
+                <br />
+                <section class="grid-container form">
+                    <img class="gird-item1" style="width:180px;height:180px; margin-top:20px" src="img/bunk1.jpg" >
+                    <span class="gird-item2" style="margin: 5px;">
+                        <h3 style="font-size:160%;color: black"> Bunk Bed for girl </h3>
+                        <p style="font-size:120%;color: black"> Suitable for family with children </p>
+                        <p style="font-size:100%;color: black"> Price: 345,000Đ/ day  </p>
+                        <button style="width:120px; height:40px; background: #e7e7e7; border-radius:5px; text-align: center "> Detail </button>
+                    </span>
+                </section>
+                <br />
+                <section class="grid-container form">
+                    <img class="gird-item1" style="width:180px;height:180px; margin-top:30px" src="img/bunk2.jpg" >
+                    <span class="gird-item2" style="margin: 5px;">
+                        <h3 style="font-size:160%; color: black"> Bunk Bed Decorate </h3>
+                        <p style="font-size:120%;color: black"> Suitable for family with children </p>
+                        <p style="font-size:100%;color: black"> Price: 600,000Đ/ day  </p>
+                        <button style="width:120px; height:40px; background: #e7e7e7; border-radius:5px; text-align: center "> Detail </button>
+                    </span>
+                </section>
+    
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed" id="footer">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#page-home" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-home ui-btn-icon-notext ui-nodisc-icon ui-state-persist active">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#page-create" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-plus ui-btn-icon-notext ui-nodisc-icon">Create Post</a>
+                    </li>
+
+                    <li>
+                        <a href="#page-list" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-grid ui-btn-icon-notext ui-nodisc-icon">Post List</a>
+                    </li>
+
+                    <li>
+                        <a href="#page-about" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-info ui-btn-icon-notext ui-nodisc-icon">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE CREATE -->
+    <div data-role="page" id="page-create" class="page">
+        <div data-role="header" data-position="fixed" class="header-text">
+            <a style="border: none; background-color: transparent;" href="#page-list" data-transition="none"
+                class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-nodisc-icon">Back to list</a>
+            CREATE 
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <!-- Registration Form -->
+            <div class="card">
+                <form id="frm-register">
+                    <label class="label-text">Property Name</label>
+                    <p class="text-danger" id="error_name"></p>
+                    <input type="text" placeholder="Enter property name..." id="Property_name">
+                    <label class="label-text">Property Type</label>
+                    <p class="text-danger" id="error_type"></p>
+                    <select id="Property_type"></select>
+                    <label class="label-text">Bedrooms</label>
+                    <p class="text-danger" id="error_bedroom"></p>
+                    <select id="Bedroom"></select>
+                    <label class="label-text">Furniture</label>
+                    <p class="text-danger" id="error_furniture"></p>
+                    <select id="Furniture_types"></select>
+                    <label class="label-text">Rent Price</label>
+                    <p class="text-danger" id="error_price"></p>
+                    <input type='number' placeholder='Enter monthly price...' id='Rent_Price' min="0">
+                    <label class="label-text">Property Address</label>
+                    <p class="text-danger" id="error_address"></p>
+                    <p class="text-danger" id="error_city"></p>
+                    <p class="text-danger" id="error_district"></p>
+                    <p class="text-danger" id="error_ward"></p>
+                    <input type="text" placeholder="Enter address number and address name... " id="Property_address">
+                    <select id="city" required></select>
+                    <select id="district" required></select>
+                    <select id="ward" required></select>
+                    <label class="label-text">Note</label>
+                    <input type='text' placeholder='Enter note for more information...' id='Note'>
+                    <label class="label-text">Reporter</label>
+                    <p class="text-danger" id="error_reporter"></p>
+                    <input type='text' placeholder='Enter name of reporter...' id='Reporter_name'>
+
+                    <button type="submit" class="btn-create-post " id="btn-create-post">Create </button>
+                </form>
+            </div>
+
+            <form data-role="popup" id="popup-register-confirm"
+                class="ui-content ui-popup ui-body-inherit ui-overlay-shadow ui-corner-all pop-up-color"
+                data-overlay-theme="b">
+                <h2 style="text-align: center;font-weight: bold;font-size: 23px;">Information Confirm</h2>
+                <table style="text-align: left;" class="table-popup-register">
+                    <tbody>
+                        <tr>
+                            <th>Property Name</th>
+                            <td id="Property_name"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Property Address</th>
+                            <td>
+                                <span id="Property_address"></span>, <span id="ward"></span>, <span
+                                    id="district"></span>, <span id="city"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Property Type</th>
+                            <td id="Property_type"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Property Bedrooms</th>
+                            <td id="Bedroom"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Monthly Price</th>
+                            <td id="Rent_Price">/Month</td>
+                        </tr>
+
+                        <tr>
+                            <th>Property Furniture</th>
+                            <td id="Furniture_types"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Property Note</th>
+                            <td id="Note"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Reporter</th>
+                            <td id="Reporter_name"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="text-align: center;">
+                    <button type="submit" class="ui-btn ui-corner-all ui-btn-inline ui-btn-b"
+                        id="btn-confirm">Confirm</button>
+                    <a class="ui-btn ui-corner-all ui-btn-inline" data-rel="back">Cancel</a>
+                </div>
+            </form>
+        </div>
+
+        <div data-role="footer" data-position="fixed" id="footer">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#page-home" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-home ui-btn-icon-notext ui-nodisc-icon">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#page-create" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-plus ui-btn-icon-notext ui-nodisc-icon ui-state-persist active">Create
+                            Post</a>
+                    </li>
+
+                    <li>
+                        <a href="#page-list" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-grid ui-btn-icon-notext ui-nodisc-icon">Post List</a>
+                    </li>
+
+                    <li>
+                        <a href="#page-about" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-info ui-btn-icon-notext ui-nodisc-icon">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE LIST -->
+    <div data-role="page" id="page-list" class="page">
+        <div data-role="header" data-position="fixed" class="header-text">
+            <a style="border: none; background-color: transparent;" href="#page-home" data-transition="none"
+                class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-nodisc-icon">Back to list</a>
+            LIST
+        </div>
+
+        <div data-role="main">
+            <a href="#page-search" class="filter-icon" data-transition="none">
+                <img src="./img/filter.png" alt="filter-icon" height="20px">
+                <p style="margin-left: 10px; color: #111011">Filter</p>
+            </a>
+            <!--Display List-->
+            <ul id="list-post" data-role="listview" class="ui-nodisc-icon"></ul>
+        </div>
+
+        <div data-role="footer" data-position="fixed" id="footer">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#page-home" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-home ui-btn-icon-notext ui-nodisc-icon">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#page-create" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-plus ui-btn-icon-notext ui-nodisc-icon">Create Post</a>
+                    </li>
+
+                    <li>
+                        <a href="#page-list" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-grid ui-btn-icon-notext ui-nodisc-icon ui-state-persist active">Post
+                            List</a>
+                    </li>
+
+                    <li>
+                        <a href="#page-about" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-info ui-btn-icon-notext ui-nodisc-icon">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE " DETAILS" -->
+
+    <div data-role="page" id="page-detail" class="page">
+        <div data-role="header" data-position="fixed" class="header-text">
+            <a style="border: none; background-color: transparent;" href="#page-home" data-transition="none"
+                class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-nodisc-icon">Back to list</a>
+            DETAIL 
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <!-- DISPLAY DETAILS -->
+
+            <div class="card">
+                <h2 id="Property_name" style="text-align:center; text-transform: uppercase;"></h2>
+
+                <div class="flex-left">
+                    <i class="fas fa-map-pin" style="font-size: 16px;"></i>
+                    <p style="font-size: 20px; margin-left: 30px;"><span id="Property_address"></span>, <span
+                            id="Ward"></span>, <span id="District"></span>, <span id="City"></span></p>
+                </div>
+                <div class="flex-left">
+                    <i class="fas fa-home-user"></i>
+                    <p style="font-size: 20px; margin-left: 30px;" id="Property_type"></p>
+                </div>
+                <div class="flex-left">
+                    <i class="fas fa-bed"></i>
+                    <p style="font-size: 20px; margin-left: 30px;" id="Bedroom"></p>
+                </div>
+                <div class="flex-left">
+                    <i class="fas fa-dollar-sign"></i>
+                    <p style="font-size: 20px; margin-left: 30px;" id="Rent_Price"></p>
+                </div>
+                <div class="flex-left">
+                    <i class="fas fa-couch"></i>
+                    <p style="font-size: 20px; margin-left: 30px;" id="Furniture_type"></p>
+                </div>
+                <div class="flex-left">
+                    <i class="fas fa-user"></i>
+                    <p style="font-size: 20px; margin-left: 30px;" id="Reporter_name"></p>
+                </div>
+                <div class="flex-left">
+                    <i class="far fa-calendar" style="margin-left: 1px"></i>
+                    <p style=" font-size: 20px; margin-left: 30px;" id="date"></p>
+                </div>
+            </div>
+
+            <div class="ui-popup-container ui-popup-active" id="frm-update-popup">
+                <form id="frm-update" data-role="popup"
+                    class="ui-content ui-popup ui-body-inherit ui-overlay-shadow ui-corner-all" data-overlay-theme="b">
+                    <label class="label-text">Property Name</label>
+                    <p class="text-danger" id="error_name"></p>
+                    <input type="text" placeholder="Enter property name..." id="update-name">
+                    <label class="label-text">Property Type</label>
+                    <p class="text-danger" id="error_type"></p>
+                    <select id="update-type" required>
+                    </select>
+                    <label class="label-text">Bedrooms</label>
+                    <p class="text-danger" id="error_bedroom"></p>
+                    <select id="update-bedroom" required>
+                    </select>
+                    <label class="label-text">Furniture</label>
+                    <p class="text-danger" id="error_furniture"></p>
+                    <select id="update-furniture" required>
+                    </select>
+                    <label class="label-text">Rent Price</label>
+                    <p class="text-danger" id="error_price"></p>
+                    <input type='number' placeholder='Enter monthly price...' id='update-rent' min="0">
+                    <label class="label-text">Property Address</label>
+                    <p class="text-danger" id="error_address"></p>
+                    <p class="text-danger" id="error_city"></p>
+                    <p class="text-danger" id="error_district"></p>
+                    <p class="text-danger" id="error_ward"></p>
+                    <input type="text" placeholder="Enter address number and address name... " id="update-address">
+                    <select id="city" required></select>
+                    <select id="district" required></select>
+                    <select id="ward" required></select>
+
+                    <label class="label-text">Reporter</label>
+                    <p class="text-danger" id="error_reporter"></p>
+                    <input type='text' id='update-reporter' />
+
+                    <div class="flex">
+                        <div class="ui-block-b" style="padding: 5px; width: 50%;">
+                            <button type="submit" class="btn-primary ui-btn ui-shadow ui-corner-all">Update</button>
+                        </div>
+                        <div class="ui-block-a" style="padding: 5px; width: 50%;">
+                            <button type="button" id="cancel"
+                                class="btn-cancel ui-btn ui-shadow ui-corner-all">Cancel</button>
+                        </div>
+
+
+                    </div>
+                </form>
+            </div>
+
+            <div data-role="popup" id="frm-delete" class="pop-up-color">
+                <div data-role="header">
+                    <h1 style="padding-top: 20px; color: #DBD8E3 !important">Delete Post?</h1>
+                </div>
+
+                <div role="main" class="ui-content">
+                    <h3>Are you sure you want to delete this post?</h3>
+                    <br>
+
+                    <a class="btn-cancel btn-delete-cancel ui-btn ui-btn-inline" data-rel="back"><i
+                            class="fas fa-times-circle"></i></a>
+
+                    <p><em>Please type "<strong id="confirm-text"></strong>" to delete this post.</em></p>
+                    <input type="text" id="txt-delete" autocomplete="off">
+
+                    <a type="submit" class="btn-delete ui-btn ui-btn-block ui-disabled" id="btn-delete"
+                        style="background-color: #880e4f !important; color: #DBD8E3 !important;">Delete</a>
+
+
+                </div>
+            </div>
+
+
+            <div id="list-note" style="margin-top: 20px;"></div>
+            <!-- COMMENT AREA -->
+            <form id="frm-note" style="margin-top: 25px;">
+                <textarea id="txt-note" placeholder="Please enter your note here..."></textarea>
+                <div style="text-align: right;">
+                    <button type="submit" class="ui-btn ui-btn-block ui-corner-all ui-btn-b"
+                        style="background-color: #880e4f !important; border: 2px transparent solid; border-radius: 7px; font-weight: 300; color: #DBD8E3 !important">
+                        Save Note</button>
+                </div>
+
+
+            </form>
+        </div>
+        <div data-role="footer" data-position="fixed" id="footer">
+
+            <div class="flex-between" style="border: 1px #ff94c2 solid">
+                <a href="#frm-update" data-rel="popup" data-position-to="window" data-transition="fade"
+                    class="btn-primary" id="btn-update-popup"
+                    style="height: 100%; width: 50%; text-align: center; font-size: 18px; text-shadow: none;text-decoration: none;">Update</a>
+                <a href=" #frm-delete" data-rel="popup" data-position-to="window" data-transition="pop"
+                    class="btn-delete" id="btn-delete-popup"
+                    style="height: 100%; width: 50%; text-align: center; font-size: 18px;text-shadow: none;text-decoration: none;">Delete</a>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- PAGE "SEARCH" -->
+    <div data-role="page" id="page-search" class="page">
+        <div data-role="header" data-position="fixed">
+            <a style="border: none; background-color: transparent;" href="#page-list" data-transition="none"
+                class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-nodisc-icon">Back to
+                list</a>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div class="card">
+                <form id="frm-search">
+                    <label class="label-text">Property Name</label>
+                    <input type="text" placeholder="Enter property name..." id="Property_name">
+                    <label class="label-text">Property Type</label>
+                    <select id="Property_type">
+                    </select>
+                    <label class="label-text">Bedrooms</label>
+                    <select id="Bedroom">
+                    </select>
+                    <label class="label-text">Furniture</label>
+                    <select id="Furniture_types">
+                    </select>
+                    <label class="label-text">Rent Price</label>
+                    <input type='number' placeholder='Enter monthly price...' id='Rent_Price' min="0">
+                    <label class="label-text">Property Address</label>
+                    <input type="text" placeholder="Enter address number and address name... " id="Property_address">
+                    <select id="city"></select>
+                    <select id="district"></select>
+                    <select id="ward"></select>
+
+                    <button type="submit" class="btn-primary" id="btn-search-post"
+                        data-modal-target="#modal-search">Search</button>
+                </form>
+            </div>
+
+            <div class="modal" id="modal-search">
+                <div class="modal-header">
+                    <div class="title">Search Result</div>
+                    <button class="close-button" data-close-button><i class="fas fa-times-circle"></i></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="list-post" data-role="listview" class="ui-nodisc-icon"></ul>
+
+                    <p id="search-message"></p>
+                </div>
+            </div>
+            <div id="overlay"></div>
+
+
+
+        </div>
+
+        <div data-role="footer" data-position="fixed" id="footer">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#page-home" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-home ui-btn-icon-notext ui-nodisc-icon">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#page-create" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-plus ui-btn-icon-notext ui-nodisc-icon">Create Post</a>
+                    </li>
+
+                    <li>
+                        <a href="#page-list" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-grid ui-btn-icon-notext ui-nodisc-icon">Post List</a>
+                    </li>
+                    <li>
+                        <a href="#page-about" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-info ui-btn-icon-notext ui-nodisc-icon">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE "ABOUT" -->
+    <div data-role="page" id="page-about" class="page">
+        <div data-role="header" data-position="fixed" class="header-text">
+            <a style="border: none; background-color: transparent;" href="#page-home" data-transition="none"
+                class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-nodisc-icon">Back to list</a>
+            About
+        </div>
+
+        <div data-role="main" class="ui-content" style="padding-left: 0; padding-right:0">
+            <div>
+
+                <div class="card" style="margin: 30px">
+                    <p class="text-medium" style="color: #ffffff;">RentalZ</p>
+                    <p class="text-description" style="color: #ffffff;">
+                        Apartment Finder is an app that offers great deals to help you find a good deal that matches the rental price over time for your next rental.
+                    </p>
+                </div>
+                <div class="card" style="margin: 30px; padding-top: 20px;">
+                    <p class="text-medium" style="color: #ffffff" >Price </p>
+                    <p class="text-description" style="color: #ffffff">
+                        We will change the economic rent each year. But will not increase the price too high, still suitable for your price.
+                    </p>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div data-role="footer" data-position="fixed" id="footer">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#page-home" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-home ui-btn-icon-notext ui-nodisc-icon">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#page-create" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-plus ui-btn-icon-notext ui-nodisc-icon">Create Post</a>
+                    </li>
+
+                    <li>
+                        <a href="#page-list" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-grid ui-btn-icon-notext ui-nodisc-icon">Post List</a>
+                    </li>
+
+                    <li>
+                        <a href="#page-about" data-transition="none"
+                            class="ui-btn ui-btn-b ui-icon-info ui-btn-icon-notext ui-nodisc-icon ui-state-persist active">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+ 
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/validation.js"></script>
+    <script>
+        moment().format();
+    </script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
