@@ -209,15 +209,15 @@ $("#page-create #frm-register").on("submit", function (e) {
     "#page-create #frm-register #Property_name",
     "#page-create #frm-register #error_name",
     "Property Name",
-    12,
-    120
+    6,
+    100
   );
   checkCommonValidation(
     "#page-create #frm-register #Property_address",
     "#page-create #frm-register #error_address",
     "Property Address",
     6,
-    150
+    100
   );
   checkCharacterValidation(
     "#page-create #frm-register #Reporter_name",
@@ -230,8 +230,8 @@ $("#page-create #frm-register").on("submit", function (e) {
     "#page-create #frm-register #Rent_Price",
     "#page-create #frm-register #error_price",
     "Monthly Price",
-    500000,
-    500000000
+    100000,
+    5000000000
   );
   checkSelectValidation(
     "#page-create #frm-register #Property_type",
@@ -376,8 +376,6 @@ $(document).on("change", "#page-detail #frm-update #district", function () {
 });
 
 $(document).on("vclick", "#page-detail #btn-update-popup", function () {
-  // $.mobile.navigate("#page-update");
-
   var id = localStorage.getItem("currentPostId");
 
   db.transaction(function (tx) {
@@ -418,10 +416,6 @@ $(document).on("vclick", "#page-detail #btn-update-popup", function () {
           result.rows[0].Bedroom
         );
 
-        // addAddressOption($('#page-detail #frm-update #city'), 'City', result.rows[0].City);
-        // addAddressOption_District($('#page-detail #frm-update #district'), result.rows[0].City, result.rows[0].District);
-        // addAddressOption_Ward($('#page-detail #frm-update #ward'), result.rows[0].District, result.rows[0].Ward);
-
         importAddressUpdate(
           "#page-detail #frm-update",
           "City",
@@ -461,7 +455,7 @@ $("#page-detail #frm-update").on("submit", function (e) {
     "#page-detail #frm-update #error_address",
     "Property Address",
     6,
-    150
+    100
   );
   checkCharacterValidation(
     "#page-detail #frm-update #update-reporter",
@@ -474,8 +468,8 @@ $("#page-detail #frm-update").on("submit", function (e) {
     "#page-detail #frm-update #update-rent",
     "#page-detail #frm-update #error_price",
     "Monthly Price",
-    500000,
-    500000000
+    100000,
+    5000000000
   );
   checkSelectValidation(
     "#page-detail #frm-update #update-type",
@@ -789,15 +783,16 @@ function showList() {
                     } - ${post.City}</p>
                     <div class="flex-between" style="margin: 30px 20px 10px 10px">
                         <div class="flex-column">
-                            <i class="fas fa-bed"></i>
-                            <p style="font-size: 14px; font-weight: 300; text-shadow: none !important;">${
-                              post.Bedroom
-                            }</p>
+                          <i class="fas fa-dollar-sign"></i>
+                          <p style="font-size: 14px; font-weight: 300; text-shadow: none !important;">${post.Price.toLocaleString()} Đ</p>
                         </div>
                         <div class="flex-column" style="max-width:50%; width: 100%">
-                            <i class="fas fa-dollar-sign"></i>
-                            <p style="font-size: 14px; font-weight: 300; text-shadow: none !important;">${post.Price.toLocaleString()} VNĐ/Month</p>
+                          <i class="fas fa-bed"></i>
+                          <p style="font-size: 14px; font-weight: 300; text-shadow: none !important;">${
+                            post.Bedroom
+                          }</p>
                         </div>
+                        
                     </div>
                 </div>
                 
@@ -858,7 +853,7 @@ function showDetail() {
         propertytype = result.rows[0].Property_type;
         bedroom = result.rows[0].Bedroom;
         dateTime = result.rows[0].DateTime;
-        rentprice = result.rows[0].Rent_Price;
+        rentprice = result.rows[0].Rent_Price.toLocaleString();
         furnituretype = result.rows[0].Furniture_type;
         reportername = result.rows[0].Reporter;
       } else {
@@ -881,7 +876,6 @@ function showDetail() {
       );
       $("#page-detail #Rent_Price").text(rentprice);
       $("#page-detail #Furniture_type").text(furnituretype);
-      // note ? $('#page-detail #Note').text(note) : $('#page-detail #Note').text('Note have not been taken yet. Please take a note.');
 
       $("#page-detail #Reporter_name").text(reportername);
 
@@ -1127,15 +1121,10 @@ function showNote() {
       // Prepare the list of comments.
       var listNote = "";
       for (let note of result.rows) {
-        // listNote += `<div class='list'>
-        //                     <small>${moment(note.DateTime).format('dddd, MMMM Do YYYY, h:mm:ss A')}</small>
-        //                     <h3>${note.Message}</h3>
-        //             </div> `;
-
         listNote += `<div style="position: relative;" id=${
           note.Id
         } class="note">
-                                <button id='btn-delete-note'><i class="fas fa-trash-alt"></i></button>
+                                <button id='btn-delete-note'><i class="fas fa-eraser"></i></button>
                                 <div class='message-text'>${note.Message}</div>
                                 <div class='message-hour'>${moment(
                                   note.DateTime
@@ -1232,20 +1221,21 @@ function search() {
                       <div class="title"><strong>${post.Type}</strong> - ${
           post.Name
         }</div>
-                      <p style="margin-left: 10px;" class="flex"><i class="fas fa-map-marked-alt" style="font-size: 20px; margin-right: 20px;"></i>${
+                      <p style="margin-left: 10px;" class="flex"><i class="fas fa-map-pin" style="font-size: 20px; margin-right: 20px;"></i>${
                         post.City
                       }</p>
                       <div class="flex-between" style="margin: 30px 20px 10px 10px">
                           <div class="flex-column">
-                              <i class="fas fa-bed"></i>
-                              <p style="font-size: 14px; font-weight: 300;">${
-                                post.Bedroom
-                              }</p>
+                            <i class="fas fa-dollar-sign"></i>
+                            <p style="font-size: 14px; font-weight: 300;">${post.Price.toLocaleString()} Đ</p>
                           </div>
                           <div class="flex-column" style="max-width:50%; width: 100%">
-                              <i class="fas fa-hand-holding-usd"></i>
-                              <p style="font-size: 14px; font-weight: 300;">${post.Price.toLocaleString()} VNĐ/Month</p>
+                            <i class="fas fa-bed"></i>
+                            <p style="font-size: 14px; font-weight: 300;">${
+                              post.Bedroom
+                            }</p>
                           </div>
+                          
                       </div>
                   </div>
                   
