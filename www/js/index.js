@@ -972,7 +972,6 @@ function updatePost() {
     function transactionSuccess(tx, result) {
       log(`Update Post '${id}' successfully.`);
 
-      // $.mobile.navigate('#page-list', { transition: 'none' });
       showDetail();
       $("#page-detail #frm-update").popup("close");
     }

@@ -60,7 +60,7 @@ function validation() {
     if (value < minValue || value > maxValue) {
       document.querySelector(
         selectorError
-      ).innerHTML = `${name} must be in range ${minValue.toLocaleString()} VNĐ to ${maxValue.toLocaleString()}VNĐ. <br>`;
+      ).innerHTML = `${name} must be in range ${minValue.toLocaleString()} Đ to ${maxValue.toLocaleString()}Đ. <br>`;
       return false;
     }
     document.querySelector(selectorError).innerHTML = "";
